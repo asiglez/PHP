@@ -12,9 +12,7 @@
     ?>    
     <h1>Ejercicio 2</h1>
     <?php
-<<<<<<< HEAD
-    $fecha_actual = date("Y-m-d");
-
+    $fechaActual = date("Y-m-d");
     $dias_restar = 5;
     $nueva_fecha = date("Y-m-d", strtotime($fecha_actual . " - $dias_restar days"));
 
@@ -77,10 +75,5 @@
     echo (($a == $b) || ($b == $c)) ? 'La condición es verdadera<br>' : 'La condición es falsa<br>';
     echo ($b <= $c) ? 'La condición es verdadera<br>' : 'La condición es falsa<br>';
     ?>
-=======
-    $format="D-M-Y";
-    echo date($format);
-    ?>    
->>>>>>> 6e06dbccfb4bd3da7ce6e66c3153d53c142b3f82
 </body>
 </html>

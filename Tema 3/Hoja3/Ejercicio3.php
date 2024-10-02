@@ -5,9 +5,9 @@
         <title>Hoja 3</title>
     </head>
     <body>
-        <h1>Ejercicio 2</h1>
+        <h1>Ejercicio 3</h1>
     <?php
-    $dinero=1;
+
     ?>
     </body>
     </html>

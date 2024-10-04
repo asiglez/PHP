@@ -1,4 +1,5 @@
 <?php
+require_once('Producto.php');
 class Alimentacion extends Producto {
     private $mes_caducidad;
     private $anio_caducidad;

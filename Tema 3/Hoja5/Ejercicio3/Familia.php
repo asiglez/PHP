@@ -1,4 +1,5 @@
 <?php
+require_once('Medico.php');
 class Familia extends Medico {
     private $num_pacientes;
 

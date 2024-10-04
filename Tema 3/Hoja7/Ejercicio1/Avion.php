@@ -32,7 +32,7 @@ class Avion extends ElementoVolador {
         return $this->companiaAerea;
     }
     public function mostrarInformacion() {
-        echo "Avión de la compañía {$this->companiaAerea}, Altitud máxima: {$this->altitudMaxima} metros.<br>";
+        echo "Avión de la compañía {$this->companiaAerea}, Altitud máxima: {$this->altitudMaxima} metros, Fecha:".$this->fechaAlta->format('d-M-Y').".<br>";
     }
 }
 ?>

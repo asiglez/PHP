@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Hoja 6</title>
+        <title>Hoja 7</title>
     </head>
     <body>
         <h1>Ejercicio 1</h1>
@@ -12,6 +12,7 @@
     require_once('Helicoptero.php');
     require_once('ElementoVolador.php');
     require_once('Volador.php');
+    require_once('Mensaje.php');
     $aeropuerto = new Aeropuerto();
 
     // Creación de aviones y helicópteros
@@ -23,6 +24,7 @@
     $helicoptero2 = new Helicoptero("Helicóptero2", 0, 1, "Pedro", 3);
     $helicoptero3 = new Helicoptero("Helicóptero3", 0, 1, "María", 2);
     
+    use Mensaje;
     // Insertar en el aeropuerto
     $aeropuerto->insertar($avion1);
     $aeropuerto->insertar($avion2);
@@ -35,8 +37,8 @@
     $aeropuerto->buscar("Avión1");
     $aeropuerto->buscar("Avión4");
     
-    $aeropuerto->listarCompania("Iberia");
-    $aeropuerto->listarCompania("Air Europa");
+    $mensaje->mostrarMensaje($aeropuerto->listarCompania("Iberia"));
+    $mensaje->mostrarMensaje($aeropuerto->listarCompania("Air Europa"));
     
     $aeropuerto->rotores(2);
     $aeropuerto->rotores(4);

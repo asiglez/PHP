@@ -2,11 +2,14 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Hoja 4</title>
+        <title>Hoja 5</title>
     </head>
     <body>
-        <h1>Ejercicio 1</h1>
+        <h1>Ejercicio 3</h1>
     <?php
+    require_once('Familia.php');
+    require_once('Medico.php');
+    require_once('Urgencia.php');
     $arrayMedicos = [
         new Familia("Dr. García", 55, "mañana", 120),
         new Urgencia("Dr. López", 63, "tarde", "Cardiología"),

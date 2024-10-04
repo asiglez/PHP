@@ -2,11 +2,14 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Hoja 4</title>
+        <title>Hoja 5</title>
     </head>
     <body>
-        <h1>Ejercicio 1</h1>
+        <h1>Ejercicio 4</h1>
     <?php
+    require_once('Alimentacion.php');
+    require_once('Electronica.php');
+    require_once('Producto.php');
     $productos = [
         new Alimentacion("001", "Manzana", 1.50, 10, 2024),
         new Alimentacion("002", "Pan", 0.80, 11, 2023),

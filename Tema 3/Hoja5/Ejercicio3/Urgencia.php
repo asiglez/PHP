@@ -1,4 +1,5 @@
 <?php
+require_once('Medico.php');
 class Urgencia extends Medico {
     private $unidad;
 

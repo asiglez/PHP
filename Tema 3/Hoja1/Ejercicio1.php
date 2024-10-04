@@ -16,4 +16,4 @@
     echo "$dia_semana, $dia de $mes de $año";
     ?>
     </body>
-    </html>
+</html>

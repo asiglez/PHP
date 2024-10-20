@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<title>Ejercicio1</title> 
+</head> 
+<body>
+	<form action="Ejercicio1.php" method="post">
+        Moneda Origen:
+        <select name="origen">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+        Moneda Destino:
+        <select name="destino">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+        Cantidad: <input type="number" name="cantidad" step="0.01" required>
+        <button type="submit">Convertir</button>
+    </form>
+</body> 
+</html>

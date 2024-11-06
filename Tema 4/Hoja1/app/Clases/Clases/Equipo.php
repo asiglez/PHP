@@ -31,3 +31,4 @@ class Equipo
         return $this->division;
     }
 }
+?>

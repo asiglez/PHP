@@ -10,8 +10,8 @@ class Jugador
     public float $altura;
     public float $peso;
     public string $posicion;
-    public string $nombre_equipo;
-    public function __construct(int $codigo, string $nombre, $procedencia, float $altura, float $peso, string $posicion, string $nombre_equipo)
+    public $nombre_equipo;
+    public function __construct(int $codigo, string $nombre, $procedencia, float $altura, float $peso, string $posicion, $nombre_equipo)
     {
             $this->codigo = $codigo;
             $this->nombre = $nombre;
@@ -45,7 +45,7 @@ class Jugador
     {
         return $this->posicion;
     }
-    public function getNombre_equipo(): string
+    public function getNombre_equipo()
     {
         return $this->nombre_equipo;
     }

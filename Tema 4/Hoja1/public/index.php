@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Hoja 1</title>
 </head>
 
@@ -39,7 +40,7 @@
         foreach ($funcion as $jugador) {
             echo "<tr>";
             echo"<td>" . $jugador->getNombre() . "</td>";
-            echo"<td>" . $jugador->getPeso() . "</td>";
+            echo'<td><input type="text" name="peso" value="' . $jugador->getPeso() . '">kg</td>';
             echo"</tr>";
         }
         echo "</table>";

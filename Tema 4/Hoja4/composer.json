@@ -1,0 +1,17 @@
+{
+    "name": "usuario/hoja4",
+    "type": "proyect",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "asiglez",
+            "email": "asier.gonzalezgutierrez@iesmiguelherrero.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

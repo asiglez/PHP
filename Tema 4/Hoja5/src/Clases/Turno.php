@@ -3,11 +3,23 @@ namespace Src\Clases;
 
 class Turno
 {
+    public $id;
     public $tipo;
 
-    public function __construct($tipo)
+    public function __construct($id, $tipo)
     {
+        $this->id=$id;
         $this->tipo = $tipo;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
     }
     public function getTipo()
     {

@@ -4,7 +4,6 @@ namespace App\Clases\BD;
 
 use PDO;
 use PDOException;
-use App\Clases\BD\conexionBD;
 use App\Clases\Clases\Equipo;
 use App\Clases\Clases\Jugador;
 

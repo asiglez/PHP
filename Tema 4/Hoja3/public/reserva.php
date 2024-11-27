@@ -19,7 +19,7 @@ $plazas=funcionesBD::getPlazas();
 
 <body>
     <h1>Reserva de asiento</h1>
-        <form method="POST" action="">
+        <form method="POST" action="reserva.php">
         <h3>Datos del nuevo jugador:</h3><br>
         Nombre: <input type="text" name="nombre" value="Su nombre"required><br>
         DNI: <input type="text" name="dni" value="Su DNI" required>El formato deberá ser 01234567A<br>

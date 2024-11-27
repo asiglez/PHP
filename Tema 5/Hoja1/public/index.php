@@ -13,6 +13,7 @@
         <a href="reserva.php">Realizar una reserva</a>
         <a href="llegada.php">Llegada al destino</a>
         <a href="plazas.php">Gestión de plazas</a>
+        <a href="registro.php">Registro</a>
     </div>
 </body>
 </html>

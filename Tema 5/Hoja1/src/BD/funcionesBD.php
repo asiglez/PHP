@@ -3,11 +3,44 @@
 namespace Src\BD;
 
 use PDO;
+use PDOException;
 use Src\Clases\Pasajero;
 use Src\Clases\Plaza;
 
 class FuncionesBD
 {
+    public static function crearUsuario($usuario, $contraseña)
+    {
+        $dsn = 'mysql:host=localhost:3307;dbname=dwes_03_funicular';
+        $pdo = new PDO($dsn, $usuario, $contraseña);
+        try {
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $hashedPassword = password_hash($contraseña, PASSWORD_BCRYPT);
+
+            $stmt = $pdo->prepare("INSERT INTO usuarios (usuario, password) VALUES (?, ?)");
+            $stmt->execute([$usuario, $hashedPassword]);
+
+            echo "Contraseña almacenada correctamente";
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+
+        try {
+            $stmt = $pdo->prepare("SELECT password FROM usuarios WHERE usuario = :usuario");
+            $stmt->execute([":usuario"=>$usuario]);
+            $hashedPassword = $stmt->fetchColumn();
+
+            if (password_verify($contraseña, $hashedPassword)) {
+                echo "Contraseña correcta";
+            } else {
+                echo "Contraseña incorrecta";
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
     public static function getPlazas()
     {
         $conexion = conexionBD::getConnection();

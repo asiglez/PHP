@@ -21,7 +21,7 @@ class FuncionesBD
             $stmt = $pdo->prepare("INSERT INTO usuarios (usuario, password) VALUES (?, ?)");
             $stmt->execute([$usuario, $hashedPassword]);
 
-            echo "Contraseña almacenada correctamente";
+            echo "Contraseña almacenada correctamente<br>";
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }

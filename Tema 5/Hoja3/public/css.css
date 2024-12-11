@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.medico-card {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.medico-card hr {
+    margin-top: 10px;
+}
+.links {
+    margin-top: 20px;
+}
+.links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007BFF;
+}
+.links a:hover {
+    text-decoration: underline;
+}

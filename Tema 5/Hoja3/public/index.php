@@ -6,25 +6,21 @@ if (!isset($_SESSION['autenticado'])) {
     exit;
 }
 
-if (!isset($_SESSION['visitas'])) {
-    $_SESSION['visitas'] = [];
-    echo "<h1>¡Bienvenido por primera vez!</h1>";
+// Gestión de visitas
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['limpiar'])) {
+    // Limpiar el historial de visitas
+    unset($_SESSION['visitas']);
+    $mensaje = "Registro limpiado. ¡Bienvenido de nuevo!";
 } else {
-    echo "<h1>Historial de Visitas:</h1>";
-    echo "<ul>";
-    foreach ($_SESSION['visitas'] as $visita) {
-        echo "<li>$visita</li>";
-    }
-    echo "</ul>";
+    $mensaje = '';
 }
 
-// Registrar la nueva visita
-$_SESSION['visitas'][] = date("Y-m-d H:i:s");
-
-// Botón para borrar el registro
-if (isset($_POST['limpiar'])) {
+// Registrar la nueva visita si no se ha limpiado el registro
+if (!isset($_SESSION['visitas'])) {
     $_SESSION['visitas'] = [];
-    echo "<h1>Registro limpiado. ¡Bienvenido de nuevo!</h1>";
+    $mensaje = "¡Bienvenido por primera vez!";
+} else {
+    $_SESSION['visitas'][] = date("d-m-Y H:i:s");
 }
 ?>
 
@@ -38,6 +34,21 @@ if (isset($_POST['limpiar'])) {
 </head>
 
 <body>
+    <h1>Bienvenido</h1>
+
+    <?php if ($mensaje): ?>
+        <p><?= htmlspecialchars($mensaje) ?></p>
+    <?php endif; ?>
+
+    <?php if (!empty($_SESSION['visitas'])): ?>
+        <h2>Historial de Visitas:</h2>
+        <ul>
+            <?php foreach ($_SESSION['visitas'] as $visita): ?>
+                <li><?= htmlspecialchars($visita) ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
     <form method="POST">
         <button type="submit" name="limpiar">Limpiar Registro</button>
     </form>
